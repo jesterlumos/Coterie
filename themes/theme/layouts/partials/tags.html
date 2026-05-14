@@ -1,0 +1,9 @@
+<div class="tags" data-pagefind-ignore="all">
+    {{ if .Params.tags }}
+        Tags: 
+        {{ range $i, $e := .Params.tags -}}
+            {{- if $i -}}, {{ end -}}
+            <a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}'>[{{ $e | humanize }}]</a>
+        {{- end -}}
+    {{- end }}
+</div>

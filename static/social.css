@@ -1,0 +1,12 @@
+.social .social__icon {
+    font-size: 32px;
+}
+
+.social .social__list li {
+    display: inline-block;
+}
+
+.social .card {
+    background: #101010;
+    border: none;
+}

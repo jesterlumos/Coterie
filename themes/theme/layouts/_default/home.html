@@ -1,0 +1,28 @@
+{{ define "main" -}}
+	<div class="home__left">
+		{{ range shuffle .Site.Taxonomies.tags.featured }}
+			<div class="card" onclick="location.href='{{ .RelPermalink }}';">
+				<h2 class="card__label">{{ .Title }}</h2>
+				<small class="card__subtitle"> {{ partial "categories" . }} </small>
+				<small class="card__subtitle"> {{ partial "tags" . }} </small>
+				<small class="card__subtitle"> {{ if .Date }} | Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }} </small>
+				<hr>
+				<p class="card__content"> {{ .Summary | truncate 300 }} </p>
+			</div>
+		{{- end }}
+	</div>
+
+	<div class="home__right">
+		<div class="card">
+			<h2 class="card__label">All Pages</h2>
+			<small class="card__subtitle">This section lists all regular pages on this site in no particular order.</small>
+			<div class="card__content">
+				<ul>
+					{{ range shuffle .Site.RegularPages}} {{ if not (eq .Title "About")}}
+						<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+					{{- end }} {{- end}}
+				</ul>
+			</div>
+		</div>
+	</div>
+{{- end }}

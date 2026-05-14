@@ -1,0 +1,72 @@
+<input type="checkbox" id="nav-toggle">
+<aside class="sidebar">
+    <nav class="nav">
+        <h1><label class="header__nav-toggle" for="nav-toggle">&#x2715;</label></h1>        
+        <h1 class="nav__title"><a href="/" data-pagefind-ignore="all">{{ .Site.Title }}</a></h1>
+
+        {{/*  PAGEFIND INJECTED HERE  */}}
+        <div class="search">
+            <link href="/pagefind/pagefind-component-ui.css" rel="stylesheet">
+            <script src="/pagefind/pagefind-component-ui.js" type="module"></script>
+            
+            <pagefind-modal-trigger placeholder="I want to see..." data-pf-theme="dark"></pagefind-modal-trigger>
+            <pagefind-modal data-pf-theme="dark"></pagefind-modal>
+        </div>
+        {{/*  END PAGEFIND  */}}
+
+        <ul class="nav__list">
+            {{ range .Site.Menus.main.ByWeight }}{{ $base := path.Base .URL }}
+                <li class="nav__item">
+                    <a href="{{ .URL }}"> [~ / {{ .Name }}] </a>
+                </li>
+            {{- end }}
+        </ul>
+        
+        {{ if in .TableOfContents "li" }}
+        <div class="toc" data-pagefind-ignore="all">
+            <h1 class="toc__label" data-pagefind-ignore="all">Table of Contents</h1>
+            {{ .TableOfContents }}
+        </div>
+        {{ end }}
+        
+        <div class="taxonomy-list">
+            <div class="taxonomy-list__card card" onclick="location.href='/tags';">
+                <h2 class="card__label">Tags</h2>
+                <small class="card__content"> 
+                    Sort pages by tag or view all tags.
+                    <ul>
+                        {{ range .Site.Taxonomies.tags }}
+                        <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
+                        {{ end }}   
+                    </ul>
+                </small>
+            </div>
+            
+            <div class="taxonomy-list__card card" onclick="location.href='/categories';">
+                <h2 class="card__label">Categories</h2>
+                <small class="card__content"> 
+                    Sort pages by category or view all categories.
+                    <ul>
+                        {{ range .Site.Taxonomies.categories }}
+                        <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
+                        {{ end }}   
+                    </ul>
+                </small>
+            </div>
+        </div>
+        
+        <div class="social">
+            <ul class="social__list">
+                <div class="card">
+                    {{ range .Site.Params.social }}
+                        <li class="social__item">
+                            <a href="{{ .url }}" class="social__link"><i class="social__icon {{ .iconPack }} fa-{{ .icon }}"></i></a>
+                        </li>
+                    {{- end }}
+                </div>
+            </ul>
+        </div>
+        
+        {{ partial "footer" . }}
+    </nav>
+</aside>

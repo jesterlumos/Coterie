@@ -1,0 +1,11 @@
+<div class="categories" data-pagefind-ignore="all">
+    {{ if .Params.categories }}
+        Category: 
+        {{ range $i, $e := shuffle .Params.categories -}}
+            {{- if $i -}}, {{ end -}}
+            <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>[{{ $e | humanize }}]</a>
+        {{- end -}}
+
+        {{ if or .Params.tags .Date }} | {{- end }}
+    {{- end }}
+</div>

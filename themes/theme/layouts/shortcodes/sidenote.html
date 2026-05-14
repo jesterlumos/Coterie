@@ -1,0 +1,8 @@
+<div class="sidenote">
+    {{ with .Get 0 }}
+        <h1 class="sidenote__label"> {{ . }} </h1>
+    {{ end }}
+    <span class="sidenote__content">
+        {{ .Inner }}
+    </span>
+</div>

@@ -1,0 +1,13 @@
+<ul class="breadcrumbs">
+    {{ if eq .Title .Site.Title }}
+        Welcome to the Coterie!
+    {{ else }}
+        <li><a href="/">~</a> / </li>
+        
+        {{- range after 1 .Ancestors.Reverse }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li> /
+        {{- end }}
+
+        <li>{{ .Title }}</li>
+    {{- end }}
+</ul>

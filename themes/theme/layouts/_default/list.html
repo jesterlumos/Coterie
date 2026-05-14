@@ -1,0 +1,31 @@
+{{ define "title" -}}
+	{{ .Title | title }}
+{{- end }}
+
+{{ define "main" -}}
+	{{ .Content }}
+	{{ if .Params.summary }}
+		<div class="summary">
+			<h1 class="summary__label"> Summary </h1>
+			<span class="summary__content">
+				{{ .Summary }}
+			</span>
+		</div>
+	{{- end }}
+	<div>
+		{{ range shuffle .Pages }}
+			<div class="card" onclick="location.href='{{ .RelPermalink }}';">
+				<h2 class="card__label">{{ .Title }}</h2>
+				<small class="card__subtitle"> {{ partial "categories" . }} </small>
+				<small class="card__subtitle"> {{ partial "tags" . }} </small>
+				<small class="card__subtitle"> 
+				{{ if .Date }} 
+					{{ if or .Params.tags .Params.categories }} | {{- end }}
+					Last Modified: {{ .Date | time.Format ":date_medium" }} 
+				{{- end }} </small>
+				<hr>
+				<p class="card__content"> {{ .Summary | truncate 300 }} </p>
+			</div>
+		{{- end }}
+	</div>
+{{- end }}

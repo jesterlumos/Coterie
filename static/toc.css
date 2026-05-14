@@ -1,0 +1,32 @@
+.toc {
+    text-align: left;
+    border-left: 3px solid rgb(255, 72, 72);
+    align-self: start;
+    border-radius: 10px;
+    background-color: #2f2f2f;
+    padding: .1rem;
+}
+
+.toc .toc__label {
+    margin-left: 1rem;
+    font-size: 18px;
+    margin-bottom: .5rem;
+}
+
+.toc .toc__content {
+    
+}
+
+.toc nav ol {
+    padding-left: .1rem;
+    margin-top: 0;
+}
+
+.toc nav ol li {
+    margin-bottom: .25rem;
+    margin-left: 1rem;
+}
+
+.toc nav ol li a {
+    color: white;
+}

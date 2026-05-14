@@ -1,0 +1,58 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Jester's Coterie
+theme: theme
+
+pluralizelisttitles: false
+summaryLength: 50
+
+# enableGitInfo: true
+
+# frontmatter:
+#   lastmod: ["lastmod", ":git", "date", "publishDate"]
+
+params:
+  social: 
+    - name: Github
+      icon: square-github
+      iconPack: fa-brands
+      url: https://github.com/jesterlumos
+
+    - name: Email
+      icon: square-envelope
+      iconPack: fa-solid
+      url: mailto:jesterlumos@gmail.com
+
+    - name: Discord
+      icon: discord
+      iconPack: fab
+      url: https://discord.com/users/645064200502378506
+
+    - name: BlueSky (bsky.social)
+      icon: square-bluesky
+      iconPack: fa-brands
+      url: https://bsky.app/profile/cowsauce.bsky.social
+
+    - name: Spotify
+      icon: spotify
+      iconPack: fa-brands
+      url: https://open.spotify.com/user/uaj4grsh3ffnyfvak97nd6xgp
+
+menus:
+  main:
+    - name: About
+      pageRef: /about
+      weight: 1
+    - name: Coterie
+      pageRef: /coterie
+      weight: 2
+    - name: Commonplace
+      pageRef: /commonplace
+      weight: 3
+    - name: Published
+      pageRef: /published
+      weight: 4
+
+markup:
+  tableOfContents:
+    ordered: true

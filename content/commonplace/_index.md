@@ -1,0 +1,4 @@
+---
+title: Commonplace
+draft: false
+---

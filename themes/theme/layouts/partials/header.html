@@ -1,0 +1,31 @@
+<header class="header">
+    <h1><label class="header__nav-toggle" for="nav-toggle">&#9776;</label></h1>
+    <h1 class="header__title">
+        {{ partial "breadcrumbs.html" . }}
+        <a href="{{ .Permalink }}">
+            {{ with images.QR .Permalink }}
+                <img src="{{ .RelPermalink }}" width="64px" height="64px" alt="QR code for the current page" class="qr-image">
+            {{ end }}
+        </a>
+    </h1>
+    {{ partial "categories" .}} 
+    {{ partial "tags" .}} {{ if .Params.tags }} | {{- end }}
+    {{ if not .IsHome }}
+        {{ if .Date }} Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }}
+    {{- end }}    
+    {{ if .IsHome }}
+        <div class="card" onclick="location.href='/about';">
+            <h2 class="card__label">About</h2>
+            {{ with .GetPage "about" }}
+                <small class="card__subtitle"> {{ partial "categories" }} </small>
+                <small class="card__subtitle"> {{ partial "tags" . }} </small>
+                <small class="card__subtitle"> {{ if .Date }} 
+                    {{ if or .Params.tags .Params.categories }} | {{- end }}
+                    Last Modified: {{ .Date | time.Format ":date_medium" }} 
+                {{- end }} </small>
+                <hr>
+                <p class="card__content"> {{ .Summary }} </p>
+            {{- end}}
+        </div>
+    {{- end }}
+</header>
