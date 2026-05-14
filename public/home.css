@@ -1,0 +1,22 @@
+.home__left {
+    display: grid;
+    grid-column: 1 / span 1;
+    max-width: 1000px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    /* gap: 15px; */
+    justify-content: center;
+}
+
+.home__left:first-child {
+    margin: 0.5em 1em;
+}
+
+.home__right {
+    grid-column: 2 / span 1;
+    grid-row: span 20;
+}
+
+.home__right {
+    margin: 0.5em 1em;
+}
