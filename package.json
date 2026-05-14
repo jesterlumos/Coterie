@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "all": "npm run build && npm run postbuild",
+    "build": "hugo build",
+    "postbuild": "npx -y pagefind --site public"
+  }
+}
