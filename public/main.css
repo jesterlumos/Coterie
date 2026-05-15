@@ -260,9 +260,15 @@ h1 {
 	#nav-toggle:checked + .sidebar {
 		display: block;
 		min-height: 100vh;
-		min-width: 96vw;
+		min-width: 97vw;
 		position: fixed;
 		top: 0;
+		padding: 0em;
+	}
+
+	#nav-toggle:checked + .sidebar .card {
+		margin-left: 1em;
+		margin-right: 1em;
 	}
 }
 
