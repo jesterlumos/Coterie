@@ -181,7 +181,7 @@ h1 {
 .main { 
     grid-area: Main; 
     display: grid;
-    gap: 15px;
+    /* gap: 15px; */
     grid-template-columns: minmax(300px, 3fr) minmax(100px, 1fr);
 
     scrollbar-width: none;
