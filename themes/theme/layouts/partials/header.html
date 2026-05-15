@@ -1,23 +1,31 @@
 <header class="header">
-    <label class="header__nav-toggle" for="nav-toggle">&#9776;</label>
-    <h1 class="header__title">
-        {{ partial "breadcrumbs.html" . }}
-        <a href="{{ .Permalink }}">
-            {{ with images.QR .Permalink }}
-                <img src="{{ .RelPermalink }}" width="64px" height="64px" alt="QR code for the current page" class="qr-image">
-            {{ end }}
-        </a>
-    </h1>
-    {{ partial "categories" .}} 
-    {{ partial "tags" .}} {{ if .Params.tags }} | {{- end }}
-    {{ if not .IsHome }}
-        {{ if .Date }} 
-            {{ if or .Params.tags .Params.categories }} | {{- end }}
-            {{ if .GitInfo }}
-                Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
-            {{ else }}
-                Last Modified: {{ .Date | time.Format ":date_medium" }}
-            {{- end }}
-        {{- end }} 
-    {{- end }}    
+    <div class="header__text">
+        <label class="header__nav-toggle" for="nav-toggle">&#9776;</label>
+        <h1 class="header__title">
+            {{ partial "breadcrumbs.html" . }}
+
+        </h1>
+        {{ partial "categories" .}} 
+        {{ partial "tags" .}} {{ if .Params.tags }} | {{- end }}
+        {{ if not .IsHome }}
+            {{ if .Date }} 
+                {{ if or .Params.tags .Params.categories }} | {{- end }}
+                {{ if .GitInfo }}
+                    Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
+                {{ else }}
+                    Last Modified: {{ .Date | time.Format ":date_medium" }}
+                {{- end }}
+            {{- end }} 
+        {{ else }}
+            <small class="header__subtitle">
+                Abandon all expectations of a polished internet, celebrate growth, and explore the uncharted hypertext wilderness.
+            </small>
+        {{- end }}    
+    </div>
+
+    <a href="{{ .Permalink }}">
+        {{ with images.QR .Permalink }}
+            <img src="{{ .RelPermalink }}" width="75px" height="75px" alt="QR code for the current page" class="qr-image">
+        {{ end }}
+    </a>
 </header>

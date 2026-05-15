@@ -148,13 +148,23 @@ h1 {
 .header .header__title > * {
 	padding-bottom: 0;
 	margin-bottom: 0;
-	display: inline-block;
 	margin: 0em 10px;
 }
 
+.header__subtitle {
+	color: gray;
+	margin-top: 0;
+}
+
+.header__text {
+	display: inline-block;
+	padding-bottom: 1em;
+}
+
 .header .qr-image {
-	margin: 1.5rem;
-	padding: 0;
+	float: right;
+	margin: 1.25em 1.25em 1em 1em;
+	/* padding: 1em 0 0 0; */
 	border: 3px solid rgb(255, 72, 72);
 	border-radius: 10px;
 	vertical-align: middle;
