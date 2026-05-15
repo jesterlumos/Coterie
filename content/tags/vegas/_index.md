@@ -1,6 +1,6 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
+title: "Vegas"
+date: 2026-05-15T14:17:11-07:00
 draft: true
 categories: []
 tags: []
