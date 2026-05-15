@@ -7,7 +7,7 @@
 				<small class="card__subtitle"> {{ partial "tags" . }} </small>
 				<small class="card__subtitle"> {{ if .Date }} 
 					{{ if or .Params.tags .Params.categories }} | {{- end }}
-					Last Modified: {{ .Date | time.Format ":date_medium" }} 
+					Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
 				{{- end }} </small>
 				<hr>
 				<p class="card__content"> {{ .Summary }} </p>
@@ -23,7 +23,10 @@
 					<h2 class="card__label">{{ .Title }}</h2>
 					<small class="card__subtitle"> {{ partial "categories" . }} </small>
 					<small class="card__subtitle"> {{ partial "tags" . }} </small>
-					<small class="card__subtitle"> {{ if .Date }} | Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }} </small>
+					<small class="card__subtitle"> {{ if .Date }} 
+						{{ if or .Params.tags .Params.Categories }} | {{- end }}
+						Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
+						{{- end }} </small>
 					<hr>
 					<p class="card__content"> {{ .Summary | truncate 300 }} </p>
 				</div>
@@ -36,6 +39,7 @@
 		<div class="card">
 			<h2 class="card__label">All Pages</h2>
 			<small class="card__subtitle">This section lists all regular pages on this site in no particular order.</small>
+			<hr>
 			<div class="card__content">
 				<ul>
 					{{ range shuffle .Site.RegularPages}} {{ if not (eq .Title "About")}}

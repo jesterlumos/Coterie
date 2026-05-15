@@ -21,7 +21,7 @@
 				<small class="card__subtitle"> 
 				{{ if .Date }} 
 					{{ if or .Params.tags .Params.categories }} | {{- end }}
-					Last Modified: {{ .Date | time.Format ":date_medium" }} 
+					Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
 				{{- end }} </small>
 				<hr>
 				<p class="card__content"> {{ .Summary | truncate 300 }} </p>

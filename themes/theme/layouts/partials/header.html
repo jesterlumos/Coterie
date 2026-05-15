@@ -11,6 +11,6 @@
     {{ partial "categories" .}} 
     {{ partial "tags" .}} {{ if .Params.tags }} | {{- end }}
     {{ if not .IsHome }}
-        {{ if .Date }} Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }}
+        {{ if .Date }} Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a>  {{- end }}
     {{- end }}    
 </header>

@@ -32,8 +32,9 @@
         <div class="taxonomy-list">
             <div class="taxonomy-list__card card" onclick="location.href='/tags';">
                 <h2 class="card__label">Tags</h2>
+                <small class="card__subtitle">Sort pages by tag or view all tags.</small>
+                <hr>
                 <small class="card__content"> 
-                    Sort pages by tag or view all tags.
                     <ul>
                         {{ range .Site.Taxonomies.tags }}
                         <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
@@ -44,8 +45,9 @@
             
             <div class="taxonomy-list__card card" onclick="location.href='/categories';">
                 <h2 class="card__label">Categories</h2>
+                <small class="card__subtitle">Sort pages by category or view all categories.</small>
+                <hr>
                 <small class="card__content"> 
-                    Sort pages by category or view all categories.
                     <ul>
                         {{ range .Site.Taxonomies.categories }}
                         <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
