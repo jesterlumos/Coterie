@@ -5,10 +5,16 @@
 			{{ with .GetPage "about" }}
 				<small class="card__subtitle"> {{ partial "categories" }} </small>
 				<small class="card__subtitle"> {{ partial "tags" . }} </small>
-				<small class="card__subtitle"> {{ if .Date }} 
-					{{ if or .Params.tags .Params.categories }} | {{- end }}
-					Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
-				{{- end }} </small>
+				<small class="card__subtitle"> 
+					{{ if .Date }} 
+						{{ if or .Params.tags .Params.categories }} | {{- end }}
+						{{ if .GitInfo }}
+							Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
+						{{ else }}
+							Last Modified: {{ .Date | time.Format ":date_medium" }}
+						{{- end }}
+					{{- end }} 
+				</small>
 				<hr>
 				<p class="card__content"> {{ .Summary }} </p>
 			{{- end}}
@@ -23,10 +29,16 @@
 					<h2 class="card__label">{{ .Title }}</h2>
 					<small class="card__subtitle"> {{ partial "categories" . }} </small>
 					<small class="card__subtitle"> {{ partial "tags" . }} </small>
-					<small class="card__subtitle"> {{ if .Date }} 
-						{{ if or .Params.tags .Params.Categories }} | {{- end }}
-						Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
-						{{- end }} </small>
+					<small class="card__subtitle"> 
+						{{ if .Date }} 
+							{{ if or .Params.tags .Params.categories }} | {{- end }}
+							{{ if .GitInfo }}
+								Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
+							{{ else }}
+								Last Modified: {{ .Date | time.Format ":date_medium" }}
+							{{- end }}
+						{{- end }} 
+					</small>
 					<hr>
 					<p class="card__content"> {{ .Summary | truncate 300 }} </p>
 				</div>
