@@ -5,8 +5,8 @@ draft: false
 categories: ["poetry"]
 tags: ["poetry", "tribute"]
 summary: >
-    I was prompted simply to write and deliver a tribute speech, whereas all previous assignments in this course were required to be delivered extemporaneously. This opened the doors for creative play with form, and I decided that a poetic form would uniquely strengthen a tribute to my subject, the late Edgar Allan Poe.
-  
+    I was prompted simply to write and deliver a tribute speech, whereas all previous assignments in this course were required to be delivered extemporaneously. This opened the doors for creative play with form, and I decided that a poetic form would uniquely strengthen a tribute to my subject, the late Edgar Allan Poe.  
+
     I selected this subject due to my deep personal fascination with his work, the likelihood of a collegiate audience's familiarity with some of his more famous pieces, and the date of the speech deliveries being set for November 17th, 2025. This meant that my reading would fall on the anniversary of the first celebration of Poe's remains being moved from his neglected cenotaph to his current memorial monument.  
   
     The contents of the tribute were structured to adhere with a strict formal speech format (as annotated in the Instructor Copy), and the form was loosely modelled off of the form of Poe's own "The Raven." Neither poem features a 100% strict rhyme, but both pieces adhere to a strict trochaic meter (Poe's being octameter and mine being tetrameter). I also kept the same end rhyme for my refrain as Poe uses in "The Raven," and the increase in length before the refrain followed by a half-foot shortening of the refrain itself and of all lines in its position.  
