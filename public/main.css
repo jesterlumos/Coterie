@@ -67,7 +67,7 @@ h1 {
     text-align: center;
 	color: white;
 	padding: 1rem;
-
+	
     background-color: #101010;
     border-radius: 20px;
 }
@@ -114,7 +114,7 @@ h1 {
 }
 
 .tags, .categories, .tags > *, .categories > * {
-    color: gray;
+	color: gray;
 	display: inline;
 }
 /*  */
@@ -126,7 +126,6 @@ h1 {
 	grid-area: Header; 
     
     text-align: center;
-	padding-bottom: 1.5rem;
 
     background-color: #101010;
     border-radius: 20px;
