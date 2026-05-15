@@ -35,6 +35,11 @@ ul, ol {
 h1 {
 	vertical-align: middle;
 }
+
+.full-bleed {
+	/* min-width: 100%; */
+	grid-column: span 2;
+}
 /*  */
 
 
@@ -167,16 +172,23 @@ h1 {
 	max-width: 1600px;
 }
 
-.main div .card {
+.main .card {
+	grid-column: span 2;
+}
+
+.main .card, .main div .card {
 	margin: 0.5em 1em;
 }
 
 .main p, .main h1, .main h2, .main h3 {
+	/* max-width: 1000px; */
     grid-column: 1 / span 1;
-    max-width: 1000px;
 	line-height: 32px;
-	font-size: 20px;
 	margin-left: 20px;
+}
+
+.main p {
+	font-size: 20px;
 }
 /*  */
 
@@ -214,6 +226,10 @@ h1 {
 		margin-left: 0;
 		padding-left: 0;
 		scrollbar-width: none;
+	}
+
+	.qr-image {
+		display: none;
 	}
 }
 

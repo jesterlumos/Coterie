@@ -13,19 +13,4 @@
     {{ if not .IsHome }}
         {{ if .Date }} Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }}
     {{- end }}    
-    {{ if .IsHome }}
-        <div class="card" onclick="location.href='/about';">
-            <h2 class="card__label">About</h2>
-            {{ with .GetPage "about" }}
-                <small class="card__subtitle"> {{ partial "categories" }} </small>
-                <small class="card__subtitle"> {{ partial "tags" . }} </small>
-                <small class="card__subtitle"> {{ if .Date }} 
-                    {{ if or .Params.tags .Params.categories }} | {{- end }}
-                    Last Modified: {{ .Date | time.Format ":date_medium" }} 
-                {{- end }} </small>
-                <hr>
-                <p class="card__content"> {{ .Summary }} </p>
-            {{- end}}
-        </div>
-    {{- end }}
 </header>

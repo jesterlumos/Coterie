@@ -1,18 +1,38 @@
 {{ define "main" -}}
 	<div class="home__left">
-		{{ range shuffle .Site.Taxonomies.tags.featured }}
-			<div class="card" onclick="location.href='{{ .RelPermalink }}';">
-				<h2 class="card__label">{{ .Title }}</h2>
-				<small class="card__subtitle"> {{ partial "categories" . }} </small>
+		<div class="card" onclick="location.href='/about';">
+			<h2 class="card__label">About</h2>
+			{{ with .GetPage "about" }}
+				<small class="card__subtitle"> {{ partial "categories" }} </small>
 				<small class="card__subtitle"> {{ partial "tags" . }} </small>
-				<small class="card__subtitle"> {{ if .Date }} | Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }} </small>
+				<small class="card__subtitle"> {{ if .Date }} 
+					{{ if or .Params.tags .Params.categories }} | {{- end }}
+					Last Modified: {{ .Date | time.Format ":date_medium" }} 
+				{{- end }} </small>
 				<hr>
-				<p class="card__content"> {{ .Summary | truncate 300 }} </p>
-			</div>
-		{{- end }}
+				<p class="card__content"> {{ .Summary }} </p>
+			{{- end}}
+		</div>
+
+		<br>
+
+		<h1 class="featured__label">Featured Pages</h1>
+		<div class="featured">
+			{{ range shuffle .Site.Taxonomies.tags.featured }}
+				<div class="card" onclick="location.href='{{ .RelPermalink }}';">
+					<h2 class="card__label">{{ .Title }}</h2>
+					<small class="card__subtitle"> {{ partial "categories" . }} </small>
+					<small class="card__subtitle"> {{ partial "tags" . }} </small>
+					<small class="card__subtitle"> {{ if .Date }} | Last Modified: {{ .Date | time.Format ":date_medium" }} {{- end }} </small>
+					<hr>
+					<p class="card__content"> {{ .Summary | truncate 300 }} </p>
+				</div>
+			{{- end }}
+		</div>
 	</div>
 
 	<div class="home__right">
+		<h1></h1>
 		<div class="card">
 			<h2 class="card__label">All Pages</h2>
 			<small class="card__subtitle">This section lists all regular pages on this site in no particular order.</small>

@@ -1,8 +1,8 @@
-.home__left {
+.home__left .featured {
     display: grid;
     grid-column: 1 / span 1;
     max-width: 1000px;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-template-rows: auto;
     /* gap: 15px; */
     justify-content: center;
@@ -17,6 +17,6 @@
     grid-row: span 20;
 }
 
-.home__right {
-    margin: 0.5em 1em;
+.home__left h1 {
+    grid-column: span 20;
 }

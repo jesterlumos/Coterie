@@ -6,10 +6,10 @@ theme: theme
 pluralizelisttitles: false
 summaryLength: 50
 
-# enableGitInfo: true
+enableGitInfo: true
 
-# frontmatter:
-#   lastmod: ["lastmod", ":git", "date", "publishDate"]
+frontmatter:
+  lastmod: ["lastmod", ":git", "date", "publishDate"]
 
 params:
   social: 
