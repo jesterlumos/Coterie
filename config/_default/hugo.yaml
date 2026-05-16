@@ -50,7 +50,6 @@ params:
     inputPosition: top
     theme:  noborder_gray
     lang: en
-    cross-origin: anonymous
 
 menus:
   main:
