@@ -7,7 +7,6 @@
 				<small class="card__subtitle"> {{ partial "tags" . }} </small>
 				<small class="card__subtitle"> 
 					{{ if .Date }} 
-						{{ if or .Params.tags .Params.categories }} | {{- end }}
 						{{ if .GitInfo }}
 							Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
 						{{ else }}
@@ -31,7 +30,6 @@
 					<small class="card__subtitle"> {{ partial "tags" . }} </small>
 					<small class="card__subtitle"> 
 						{{ if .Date }} 
-							{{ if or .Params.tags .Params.categories }} | {{- end }}
 							{{ if .GitInfo }}
 								Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
 							{{ else }}

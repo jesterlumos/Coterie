@@ -38,7 +38,7 @@
                     <ul>
                         {{ range .Site.Taxonomies.tags }}
                             {{ if not (eq .Page.Title "Featured")}}
-                                <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
+                                <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
                             {{- end }}
                         {{- end }}   
                     </ul>
@@ -52,7 +52,7 @@
                 <small class="card__content"> 
                     <ul>
                         {{ range .Site.Taxonomies.categories }}
-                        <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
+                        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})</li>
                         {{ end }}   
                     </ul>
                 </small>
