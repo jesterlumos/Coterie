@@ -115,4 +115,4 @@ no man of evil will,
 say with me now the ancient lore:
 say with me, "Poe endures."
 
--# *by Jester Lumos; performed during COM 225 (2025)*
+*by Jester Lumos; performed during COM 225 (2025)*

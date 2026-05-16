@@ -2,8 +2,8 @@
 title: "Its Alive and It Hates You"
 date: 2026-05-13T20:48:58-07:00
 draft: false
-categories: ["essay"]
-tags: ["creative nonfiction"]
+categories: ["creative nonfiction"]
+tags: []
 summary: 'I wrote a completely different version of this piece at the height of autistic burnout many years ago, and when we were prompted simply to "imagine your mind as a house," I knew I wanted to revisit this piece. It remains one of my favorites of my own works of creative nonfiction, and powerfully encapsulates the raw experience of autistic burnout in my own life. As such, I also read it to conclude my lesson on burnout in my CPD 250 Peer Mentor Training course.'
 ---
 Imagine you live in something like a house, but it's alive and it hates you. It keeps the house at least 10% colder than you are comfortable with at all times. It seems like something should be small enough to live with if it can be solved by a blanket, but the house knows if you use a blanket or if you put on a jacket or sit by the fireplace. It cranks the heat up because it knows and it hates you. It wants you to exist in a constant state of adding layers, overheating, taking off layers, and freezing. You will be hot and you will be cold and you will be hot because the house wants you to know that you don't deserve comfort. It's alive and it hates you.

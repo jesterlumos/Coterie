@@ -2,8 +2,8 @@
 title: "Whipped Cream and Secrets"
 date: 2026-05-13T20:46:08-07:00
 draft: true
-categories: ["essay"]
-tags: ["creative nonfiction"]
+categories: ["creative nonfiction"]
+tags: []
 summary: >
     This piece was a practical study of the advice presented by Susan Bruns Rowe in "Unafraid of the Dark". Specifically we were assigned to:
     go cold,

@@ -45,7 +45,7 @@
 			{{ partial "header" . }} 
 
 			<main class="main" data-pagefind-body>
-				{{ block "main" . }} {{ .Content  }} {{ end }}
+				{{ block "main" . }} {{ .Content  | safeHTML }} {{ end }}
 			</main>
 		</div>
 	</body>

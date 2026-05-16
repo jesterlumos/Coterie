@@ -37,8 +37,10 @@
                 <small class="card__content"> 
                     <ul>
                         {{ range .Site.Taxonomies.tags }}
-                        <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
-                        {{ end }}   
+                            {{ if not (eq .Page.Title "Featured")}}
+                                <li><a href="{{ .Page.Permalink }}">[{{ .Page.Title }}]</a> ({{ .Count }})</li>
+                            {{- end }}
+                        {{- end }}   
                     </ul>
                 </small>
             </div>
