@@ -186,7 +186,7 @@ h1 {
 
     scrollbar-width: none;
 
-    max-height: 85vh;
+    max-height: 90vh;
     min-height: 0;    
     min-width: 0;    
 	
@@ -229,7 +229,7 @@ h1 {
 }
 /*  */
 
-@media only screen and (max-width: 1375px) {
+@media only screen and (max-width: 1000px) {
 	html {
 		scrollbar-width: none;
 	}
