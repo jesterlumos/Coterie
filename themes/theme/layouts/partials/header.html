@@ -6,8 +6,6 @@
         </h1>
 
         {{ partial "categories" .}} 
-        {{ partial "tags" .}} 
-        
         {{ if not .IsHome }}
             {{ if .Date }} 
                 {{ if .GitInfo }}
@@ -15,6 +13,7 @@
                 {{ else }}
                     <small class="header__subtitle">Last Modified: {{ .Date | time.Format ":date_medium" }}</small>
                 {{- end }}
+                {{ if .Params.tags }} <hr> {{ partial "tags" .}} {{- end }}
             {{- end }} 
         {{ else }}
             <small class="header__subtitle">
