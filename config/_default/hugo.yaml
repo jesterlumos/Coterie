@@ -37,6 +37,20 @@ params:
       icon: spotify
       iconPack: fa-brands
       url: https://open.spotify.com/user/uaj4grsh3ffnyfvak97nd6xgp
+  
+  giscus:
+    repo: jesterlumos/Coterie
+    repoID: R_kgDOSduDmA
+    category: Announcements
+    categoryID: DIC_kwDOSduDmM4C9NC5
+    mapping: og:title
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: top
+    theme:  noborder_gray
+    lang: en
+    cross-origin: anonymous
 
 menus:
   main:
@@ -52,6 +66,9 @@ menus:
     - name: Published
       pageRef: /published
       weight: 4
+    - name: Blog
+      pageRef: /Blog
+      weight: 5
 
 markup:
   tableOfContents:

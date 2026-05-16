@@ -13,13 +13,10 @@
     margin-bottom: .5rem;
 }
 
-.toc .toc__content {
-    
-}
-
 .toc nav ol {
     padding-left: .1rem;
     margin-top: 0;
+    scroll-target-group: auto;
 }
 
 .toc nav ol li {
@@ -29,4 +26,8 @@
 
 .toc nav ol li a {
     color: white;
+}
+
+.toc nav ol li a:target-current {
+    color: red;
 }

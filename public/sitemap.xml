@@ -2,155 +2,161 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/creative-nonfiction/</loc>
-    <lastmod>2026-05-16T12:14:30-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/multimedia/</loc>
-    <lastmod>2026-05-16T12:13:17-07:00</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2026-05-16T13:55:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-16T11:53:41-07:00</lastmod>
+    <lastmod>2026-05-16T13:55:23-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/giscus-hugo/</loc>
+    <lastmod>2026-05-16T13:55:16-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/creative-nonfiction/</loc>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/multimedia/</loc>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/rearview-alone/</loc>
-    <lastmod>2026-05-16T11:53:41-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/everyone-is-a-poet/</loc>
-    <lastmod>2026-05-16T11:27:58-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/pedagogy/</loc>
-    <lastmod>2026-05-16T11:27:08-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/philosophy/</loc>
-    <lastmod>2026-05-16T11:27:03-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/the-kids-are-right/</loc>
-    <lastmod>2026-05-16T11:25:37-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/please-dont-nuke-me-little-human/</loc>
-    <lastmod>2026-05-16T11:23:37-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/mors-poetica/</loc>
-    <lastmod>2026-05-16T11:20:01-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ars-poetica/</loc>
-    <lastmod>2026-05-16T11:19:52-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/collaborations/</loc>
-    <lastmod>2026-05-16T11:16:23-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/sonnet/</loc>
-    <lastmod>2026-05-16T11:16:10-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/contrast/</loc>
-    <lastmod>2026-05-16T11:15:46-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/20-poems-20-days/</loc>
-    <lastmod>2026-05-16T11:15:36-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/collection/</loc>
-    <lastmod>2026-05-16T11:15:26-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/prose-poetry/</loc>
-    <lastmod>2026-05-16T11:15:14-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/academia/</loc>
-    <lastmod>2026-05-16T11:15:06-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/inanimate-speakers/</loc>
-    <lastmod>2026-05-16T11:14:55-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/chapbook/</loc>
-    <lastmod>2026-05-16T11:14:47-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/process/</loc>
-    <lastmod>2026-05-16T11:14:10-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/publicly-featured/</loc>
-    <lastmod>2026-05-16T11:13:16-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/crow-funeral/</loc>
-    <lastmod>2026-05-16T11:08:14-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-bake-a-war/</loc>
-    <lastmod>2026-05-16T11:07:20-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/joining-the-televised-crusade/</loc>
-    <lastmod>2026-05-16T11:05:35-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-disappear/</loc>
-    <lastmod>2026-05-16T11:03:52-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-survive-the-apocalypse/</loc>
-    <lastmod>2026-05-16T11:03:00-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-buy-love/</loc>
-    <lastmod>2026-05-16T11:01:49-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-pick-a-major/</loc>
-    <lastmod>2026-05-16T11:00:12-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-get-a-job/</loc>
-    <lastmod>2026-05-16T10:53:27-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/road-to-the-monochrome-empire/</loc>
-    <lastmod>2026-05-16T10:51:31-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-keep-busy/</loc>
-    <lastmod>2026-05-16T10:50:04-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/how-to-celebrate-the-earth/</loc>
-    <lastmod>2026-05-16T10:47:37-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/orange-sunset/</loc>
-    <lastmod>2026-05-16T10:16:13-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/moon-poem/</loc>
-    <lastmod>2026-05-16T10:08:25-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/published/contrast/</loc>
-    <lastmod>2026-05-16T10:07:42-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/autobiographical/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/behold/</loc>
-    <lastmod>2026-05-16T10:04:23-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-16T10:04:23-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/critique/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/essay/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/external/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/featured/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/interactive-fiction/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/poetry/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/queer/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/tribute/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/web/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T13:02:23-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/process/</loc>
-    <lastmod>2026-05-16T10:01:39-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/terzaversenelle/</loc>
     <lastmod>2026-05-16T09:57:34-07:00</lastmod>
@@ -168,7 +174,7 @@
     <lastmod>2026-05-14T12:31:22-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/poe-endures/</loc>
-    <lastmod>2026-05-15T13:39:51-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/lavender-tongue/</loc>
     <lastmod>2026-05-14T12:31:22-07:00</lastmod>
@@ -177,7 +183,7 @@
     <lastmod>2026-05-14T12:31:22-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/its-alive-and-it-hates-you/</loc>
-    <lastmod>2026-05-14T12:31:22-07:00</lastmod>
+    <lastmod>2026-05-16T12:17:14-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/coterie/two-eyes/</loc>
     <lastmod>2026-05-14T12:31:22-07:00</lastmod>
