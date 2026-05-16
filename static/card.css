@@ -3,27 +3,8 @@
     border: 1px solid rgb(255, 72, 72);
     border-radius: 10px;
     background-color: #2f2f2f;
-    text-align: center;
     cursor: pointer;
 }
-
-/* .card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        0deg, 
-        transparent, 
-        transparent 30%, 
-        rgba(255, 72, 72, 0.3)
-    );
-    transform: rotate(-45deg);
-    transition: all 0.5s ease;
-    opacity: 0;
-} */
 
 .card:hover {
     transform: scale(1.02);
@@ -38,10 +19,12 @@
 .card .card__label {
     padding: 0;
     margin: 0;
+    margin-left: 0.5em;
 }
 
-.card__subtitle, .card__subtitle > * {
+.card__subtitle {
     color: gray;
+    margin-left: 0.5em;
 }
 
 .card p, .card ul li {

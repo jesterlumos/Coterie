@@ -1,6 +1,5 @@
 <div class="categories" data-pagefind-ignore="all">
     {{ if .Params.categories }}
-        Category: 
         {{ range .Params.categories -}}
             <span class="bubble">
                 <a href='{{ "/categories/" | relLangURL }}{{ . | urlize }}'>[{{ . | humanize }}]</a>

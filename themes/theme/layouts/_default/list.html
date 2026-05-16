@@ -17,7 +17,6 @@
 			<div class="card" onclick="location.href='{{ .RelPermalink }}';">
 				<h2 class="card__label">{{ .Title }}</h2>
 				<small class="card__subtitle"> {{ partial "categories" . }} </small>
-				<small class="card__subtitle"> {{ partial "tags" . }} </small>
 				<small class="card__subtitle"> 
 					{{ if .Date }} 
 						{{ if .GitInfo }}
@@ -27,6 +26,8 @@
 						{{- end }}
 					{{- end }} 
 				</small>
+				<hr>
+				<small class="card__subtitle"> {{ partial "tags" . }} </small>
 				<hr>
 				<p class="card__content"> {{ .Summary | truncate 300 }} </p>
 			</div>
