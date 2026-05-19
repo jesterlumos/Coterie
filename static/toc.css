@@ -1,6 +1,6 @@
 .toc {
     text-align: left;
-    border-left: 3px solid rgb(255, 72, 72);
+    border-left: 3px solid var(--global-font-color-special);
     align-self: start;
     border-radius: 10px;
     background-color: #2f2f2f;
@@ -9,7 +9,7 @@
 
 .toc .toc__label {
     margin-left: 1rem;
-    font-size: 18px;
+    font-size: var(--global-font-size-header);
     margin-bottom: .5rem;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .toc nav ol li a {
-    color: white;
+    color: var(--global-font-color-primary);
 }
 
 .toc nav ol li a:target-current {

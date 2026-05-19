@@ -17,7 +17,7 @@
         <ul class="nav__list">
             {{ range .Site.Menus.main.ByWeight }}{{ $base := path.Base .URL }}
                 <li class="nav__item">
-                    <a href="{{ .URL }}"> [~ / {{ .Name }}] </a>
+                    <a href="{{ .URL }}"><small>[~/{{ .Name }}]</a></small>
                 </li>
             {{- end }}
         </ul>

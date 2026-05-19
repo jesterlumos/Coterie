@@ -7,6 +7,6 @@
 }
 
 .social .card {
-    background: #101010;
+    background: var(--global-background-dark);
     border: none;
 }

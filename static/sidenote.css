@@ -1,24 +1,21 @@
 .sidenote {
     grid-column: 2 / span 1;
     text-align: left;
-    border-left: 5px solid rgb(255, 72, 72);
+    border-left: 5px solid var(--global-font-color-special);
     padding: 10px;
     margin: 1em;
     align-self: start;
     grid-row: span 20;
     border-radius: 5px;
+    background-color: var(--global-background-light);
 }
 
 .sidenote .sidenote__label {
     margin: 0 0 10px 0;
-    font-size: 24px;
-}
-
-.sidenote .sidenote__content {
-    line-height: 24px;
+    font-size: var(--global-font-size-header);
 }
 
 .main p:hover + .sidenote {
-	background-color: #2f2f2f;
+	background-color: var(--global-background-dark);
     cursor: pointer;
 }

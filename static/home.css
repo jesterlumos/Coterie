@@ -4,7 +4,6 @@
     max-width: 1000px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-template-rows: auto;
-    /* gap: 15px; */
     justify-content: center;
 }
 

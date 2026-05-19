@@ -1,3 +1,28 @@
+/* CSS IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,900;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+/* END IMPORTS */
+
+/* VARIABLES */
+:root {
+	--global-background-primary: rgb(25, 13, 13);
+	--global-background-light: rgb(33, 18, 18);
+	--global-background-dark: rgb(18, 8, 8);
+
+	--global-font-color-primary: rgb(255, 229, 229);
+	--global-font-color-light: rgb(132, 98, 98);
+	--global-font-color-special: rgb(210, 45, 45);
+
+	--global-font-size-normal: 16px;
+	--global-font-size-heading: 24;
+	--global-font-size-title: 36;
+	--global-font-size-small: 12;
+
+	--global-font-family-normal: "IBM Plex Mono", ui-monospace, monospace;
+	--global-font-family-heading: "Archivo", ui-sans-serif, sans-serif;
+}
+/* END VARIABLES */
+
 /* BASIC STYLING */
 html {
 	height: 100%;
@@ -5,19 +30,21 @@ html {
 }
 
 body {
-	font-family: sans-serif;
-	background: #181818;
-	color: #fff;
+	font-family: var(--global-font-family-normal);
+	background-color: var(--global-background-primary);
+	color: var(--global-font-color-primary);
 	height: 100%;
+	font-size: var(--global-font-size-normal);
+	line-height: 1.5;
 }
 
 a {
-	color: rgb(255, 72, 72);
+	color: var(--global-font-color-special);
 	text-decoration: none;
 }
 
 a:hover {
-	color: rgb(255, 122, 122);
+	color: var(--global-font-color-special);
 	text-decoration: underline;
 }
 
@@ -33,10 +60,28 @@ ul, ol {
 
 h1 {
 	vertical-align: middle;
+	font-weight: 900;
+	font-variation-settings:
+    	"wdth" 125;
+}
+
+h1, h2, h3 {
+	font-family: var(--global-font-family-heading);
+}
+
+h2 {
+	font-weight: 700;
+	/* font-variation-settings:
+		"wdth" 125; */
+}
+
+h3 {
+	font-weight: 400;
+	/* font-variation-settings:
+    	"wdth" 125; */
 }
 
 .full-bleed {
-	/* min-width: 100%; */
 	grid-column: span 2;
 }
 
@@ -69,10 +114,10 @@ a:target-current {
 	grid-area: Sidebar; 
 
     text-align: center;
-	color: white;
+	color: var(--global-font-color-primary);
 	padding: 1rem;
 	
-    background-color: #101010;
+    background-color: var(--global-background-dark);
     border-radius: 20px;
 }
 
@@ -81,7 +126,7 @@ a:target-current {
 }
 
 .nav .nav__title > a {
-	color: white;
+	color: var(--global-font-color-primary);
 }
 
 .nav .nav__title {
@@ -98,7 +143,7 @@ a:target-current {
 	list-style-type: none;
 	text-decoration: none;
 	text-align: left;
-	color: white;
+	color: var(--global-font-color-primary);
 	margin-left: 0;
 	padding-left: 0;
 	display: inline-block;
@@ -118,7 +163,6 @@ a:target-current {
 }
 
 .taxonomy-list__card .card__content ul {
-	justify-content: center;
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
@@ -127,14 +171,12 @@ a:target-current {
 .taxonomy-list__card .card__content ul li {
 	display: inline-block;
 	width: calc(100% / 2);
-	text-align: center;
 	line-height: 1.5;
 }
 
 .tags, .categories, .tags > *, .categories > * {
-	color: gray;
+	color: var(--global-font-color-light);
 	display: inline-block;
-	margin: .25em;
 }
 /*  */
 
@@ -146,20 +188,21 @@ a:target-current {
     
     text-align: center;
 
-    background-color: #101010;
+    background-color: var(--global-background-dark);
     border-radius: 20px;
 }
 
 .header .header__title > * {
+	font-size: var(--global-font-size-title);
 	padding-bottom: 0;
 	margin-bottom: 0;
 	margin: 0em 10px;
 }
 
 .header__subtitle {
-	color: gray;
+	color: var(--global-font-color-light);
 	margin-top: 0;
-	font-size: 18px;
+	font-size: var(--global-font-size-heading);
 }
 
 .header__text {
@@ -170,8 +213,7 @@ a:target-current {
 .header .qr-image {
 	float: right;
 	margin: 1.25em 1.25em 1em 1em;
-	/* padding: 1em 0 0 0; */
-	border: 3px solid rgb(255, 72, 72);
+	border: 3px solid var(--global-font-color-special);
 	border-radius: 10px;
 	vertical-align: middle;
 }
@@ -187,12 +229,11 @@ a:target-current {
 .main { 
     grid-area: Main; 
     display: grid;
-    /* gap: 15px; */
     grid-template-columns: minmax(300px, 3fr) minmax(100px, 1fr);
 
     scrollbar-width: none;
 
-    max-height: 87vh;
+    max-height: 82vh;
     min-height: 0;    
     min-width: 0;    
 	
@@ -211,14 +252,15 @@ a:target-current {
 }
 
 .main p, .main h1, .main h2, .main h3 {
-	/* max-width: 1000px; */
     grid-column: 1 / span 1;
-	line-height: 32px;
-	margin-left: 20px;
+}
+
+.main h1 {
+	margin-left: .5em;
 }
 
 .main p {
-	font-size: 20px;
+	font-size: var(--global-font-size-normal);
 }
 /*  */
 
@@ -273,7 +315,7 @@ a:target-current {
 		display: inline;
 		cursor: pointer;
 		float: left;
-		font-size: 2rem;
+		font-size: var(--global-font-size-title);
 		margin-left: 1rem;
 		vertical-align: middle;
 	}

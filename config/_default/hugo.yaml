@@ -57,7 +57,7 @@ params:
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: top
-    theme:  noborder_gray
+    theme: https://jesterlumos.pages.dev/comments.css
     lang: en
 
 menus:

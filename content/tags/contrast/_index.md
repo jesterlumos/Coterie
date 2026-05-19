@@ -1,5 +1,5 @@
 ---
-title: "Contrast: Light and Darkness"
+title: "Contrast"
 date: 2026-05-16T11:15:46-07:00
 draft: false
 categories: ["list"]
