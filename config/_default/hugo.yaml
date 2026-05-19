@@ -2,6 +2,7 @@ baseURL: https://jesterlumos.pages.dev
 languageCode: en-us
 title: Jester's Coterie
 copyright: © 2026 Jester Lumos. All rights reserved.
+
 theme: theme
 
 pluralizelisttitles: false
@@ -13,11 +14,18 @@ frontmatter:
   lastmod: ["lastmod", ":git", "date", "publishDate"]
 
 params:
+  ShoFullTextinRSS: true
+
   social: 
     - name: Github
       icon: square-github
       iconPack: fa-brands
       url: https://github.com/jesterlumos
+
+    - name: RSS
+      icon: square-rss
+      iconPack: fa-solid
+      url: "/index.xml"
 
     - name: Email
       icon: square-envelope
