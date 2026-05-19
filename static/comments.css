@@ -1,4 +1,4 @@
-main {
+:root {
   --primary-default: 210, 45, 45;
   --bg-default: 25, 13, 13;
   --color-prettylights-syntax-comment: #8b949e;
@@ -62,8 +62,8 @@ main {
   --color-fg-default: rgb(235 235 245 / 86%);
   --color-fg-muted: rgb(235 235 245 / 60%);
   --color-fg-subtle: rgb(235 235 245 / 50%);
-  --color-canvas-default: rgb(30 30 32 / 100%);
-  --color-canvas-overlay: rgb(30 30 32 / 100%);
+  --color-canvas-default: var(--bg-default);
+  --color-canvas-overlay: var(--bg-default);
   --color-canvas-inset: rgba(var(--bg-default), 0.85);
   --color-canvas-subtle: rgba(var(--bg-default), 1);
   --color-border-default: rgba(var(--bg-default), 0.85);
