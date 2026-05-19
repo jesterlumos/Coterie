@@ -3,17 +3,15 @@
     border: 1px solid rgb(255, 72, 72);
     border-radius: 10px;
     background-color: #2f2f2f;
+}
+
+.card:not(.card--no-hover) {
     cursor: pointer;
 }
 
-.card:hover {
+.card:not(.card--no-hover):hover {
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(255, 72, 72, 0.5);
-}
-
-.card:hover::before {
-    opacity: 1;
-    transform: rotate(-45deg) translateY(100%);
 }
 
 .card .card__label {
