@@ -1,6 +1,7 @@
 baseURL: https://jesterlumos.pages.dev
 languageCode: en-us
 title: Jester's Coterie
+copyright: © 2026 Jester Lumos. All rights reserved.
 theme: theme
 
 pluralizelisttitles: false
