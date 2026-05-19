@@ -4,4 +4,4 @@
     "build": "hugo build",
     "postbuild": "npx -y pagefind --site public"
   }
-}
+} 
