@@ -74,6 +74,8 @@
 {{ $black := resources.Get "fonts/Archivo.ttf" }}
 {{ $regular := resources.Get "fonts/IBMPlexMono.ttf" }}
 
+{{ $title := .Site.Title }}
+{{ if .IsPage }} {{ $title = .Page.Title }} {{- end }}
 {{ $image := $baseImage.Filter (images.Text (.Page.Title | truncate 20) (dict
     "alignx" "left"
     "aligny" "top"
