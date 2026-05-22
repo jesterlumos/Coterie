@@ -69,101 +69,100 @@
 {{- end }}
 {{/*  END DEFAULT PARTIAL  */}}
 
-{{ if .IsPage }}
-    {{ $baseImage := resources.Get "images/og_base.png" }}
-    {{ $black := resources.Get "fonts/Archivo.ttf" }}
-    {{ $regular := resources.Get "fonts/IBMPlexMono.ttf" }}
 
-    {{ $image := $baseImage.Filter (images.Text (.Page.Title | truncate 20) (dict
+{{ $baseImage := resources.Get "images/og_base.png" }}
+{{ $black := resources.Get "fonts/Archivo.ttf" }}
+{{ $regular := resources.Get "fonts/IBMPlexMono.ttf" }}
+
+{{ $image := $baseImage.Filter (images.Text (.Page.Title) (dict
+    "alignx" "left"
+    "aligny" "top"
+    "color" "#ffe5e5"
+    "size" 85
+    "linespacing" 10
+    "x" 170
+    "y" 250
+    "font" $black))
+}}
+
+{{ if .Summary}}
+    {{- $slice := split (plainify .Summary | htmlUnescape) " " -}}
+
+    {{- $line := "" -}}
+    {{- $lineLength := 50 -}}
+
+    {{- $summary := ""}}
+
+    {{- $lineCount := 0 -}}
+    {{- $maxLines := 6 -}}
+    
+    {{- range $slice -}}
+        {{ $summary = printf "%s %s" $summary . }}
+        {{ $line = printf "%s %s" $line . }}
+
+        {{ if gt (len $line) $lineLength }}
+            {{ $summary = printf "%s\n" $summary }}
+            {{ $line = "" }}
+            {{ $lineCount = add $lineCount 1 }}
+        {{- end }}
+
+        {{ if gt $lineCount $maxLines }}
+            {{ $summary = printf "%s..." (chomp $summary) }}
+            {{ break }}
+        {{- end }}
+    {{- end -}} 
+
+    {{ $image = $image.Filter (images.Text $summary (dict
         "alignx" "left"
         "aligny" "top"
-        "color" "#ffe5e5"
-        "size" 85
-        "linespacing" 10
-        "x" 170
-        "y" 250
-        "font" $black))
+        "color" "#846262"
+        "size" 22
+        "linespacing" 6
+        "x" 175
+        "y" 340
+        "font" $regular))
     }}
-
-    {{ if .Summary}}
-        {{- $slice := split (plainify .Summary | htmlUnescape) " " -}}
-
-        {{- $line := "" -}}
-        {{- $lineLength := 50 -}}
-
-        {{- $summary := ""}}
-
-        {{- $lineCount := 0 -}}
-        {{- $maxLines := 6 -}}
-        
-        {{- range $slice -}}
-            {{ $summary = printf "%s %s" $summary . }}
-            {{ $line = printf "%s %s" $line . }}
-
-            {{ if gt (len $line) $lineLength }}
-                {{ $summary = printf "%s\n" $summary }}
-                {{ $line = "" }}
-                {{ $lineCount = add $lineCount 1 }}
-            {{- end }}
-
-            {{ if gt $lineCount $maxLines }}
-                {{ $summary = printf "%s..." (chomp $summary) }}
-                {{ break }}
-            {{- end }}
-        {{- end -}} 
-
-        {{ $image = $image.Filter (images.Text $summary (dict
-            "alignx" "left"
-            "aligny" "top"
-            "color" "#846262"
-            "size" 22
-            "linespacing" 6
-            "x" 175
-            "y" 340
-            "font" $regular))
-        }}
-    {{- end }}
-
-    {{ $categories := .Page.Params.Categories }}
-    {{- if $categories }}
-        {{ $category := printf "/%s" (index $categories 0) }}
-        {{ $image = $image.Filter (images.Text $category (dict
-            "color" "#ffe5e5"
-            "size" 32
-            "x" 600
-            "y" 128
-            "font" $regular))
-        }}
-    {{- end }}
-
-    {{ if .GitInfo }}
-        {{ $date := .GitInfo.CommitDate | time.Format ":date_medium" }}
-
-        {{ $image = $image.Filter (images.Text $date (dict
-            "alignx" "right"
-            "aligny" "bottom"
-            "color" "#846262"
-            "size" 22
-            "x" 335
-            "y" 210
-            "font" $regular))
-        }}
-    {{ else if .Date}}
-        {{ $date := .Date | time.Format ":date_medium" }}
-            {{ $image = $image.Filter (images.Text $date (dict
-            "alignx" "right"
-            "aligny" "bottom"
-            "color" "#846262"
-            "size" 22
-            "x" 315
-            "y" 210
-            "font" $regular))
-        }}
-    {{- end }}
-
-    {{ $image = resources.Copy (path.Join .Page.RelPermalink "og.png") $image }}
-
-    <meta property="og:image" content="{{ $image.Permalink }}">
-    <meta property="og:image:width" content="{{ $image.Width }}">
-    <meta property="og:image:height" content="{{ $image.Height }}">
 {{- end }}
+
+{{ $categories := .Page.Params.Categories }}
+{{- if $categories }}
+    {{ $category := printf "/%s" (index $categories 0) }}
+    {{ $image = $image.Filter (images.Text $category (dict
+        "color" "#ffe5e5"
+        "size" 32
+        "x" 600
+        "y" 128
+        "font" $regular))
+    }}
+{{- end }}
+
+{{ if .GitInfo }}
+    {{ $date := .GitInfo.CommitDate | time.Format ":date_medium" }}
+
+    {{ $image = $image.Filter (images.Text $date (dict
+        "alignx" "right"
+        "aligny" "bottom"
+        "color" "#846262"
+        "size" 22
+        "x" 335
+        "y" 210
+        "font" $regular))
+    }}
+{{ else if .Date}}
+    {{ $date := .Date | time.Format ":date_medium" }}
+        {{ $image = $image.Filter (images.Text $date (dict
+        "alignx" "right"
+        "aligny" "bottom"
+        "color" "#846262"
+        "size" 22
+        "x" 315
+        "y" 210
+        "font" $regular))
+    }}
+{{- end }}
+
+{{ $image = resources.Copy (path.Join .Page.RelPermalink "og.png") $image }}
+
+<meta property="og:image" content="{{ $image.Permalink }}">
+<meta property="og:image:width" content="{{ $image.Width }}">
+<meta property="og:image:height" content="{{ $image.Height }}">
