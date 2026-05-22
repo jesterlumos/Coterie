@@ -243,6 +243,10 @@ a:target-current {
 	max-width: 1600px;
 }
 
+.main .featured__label {
+	margin-left: 0.5em;
+}
+
 .main .card {
 	grid-column: span 2;
 }
@@ -253,10 +257,6 @@ a:target-current {
 
 .main p, .main h1, .main h2, .main h3 {
     grid-column: 1 / span 1;
-}
-
-.main h1 {
-	margin-left: .5em;
 }
 
 .main p {
