@@ -22,7 +22,7 @@ a horseshoe's radiant decadence
 unfolds a fractal 8 million miles,  
 and knows my shame, my ignorance.  
 
-i'll never forget the smiles. 
+i'll never forget the smiles  
 of each bone in the neon graveyard,  
 fractals unfolding for millions of miles!  
 
