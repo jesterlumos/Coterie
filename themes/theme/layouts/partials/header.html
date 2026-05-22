@@ -2,14 +2,14 @@
     <div class="header__text">
         <h1 class="header__title">
             <label class="header__nav-toggle" for="nav-toggle">&#9776;</label>
-            {{ partial "breadcrumbs.html" . }}
+            {{ partial "breadcrumbs" . }}
         </h1>
 
         {{ partial "categories" .}} 
         {{ if not .IsHome }}
             {{ if .Date }} 
                 {{ if .GitInfo }}
-                    <small class="header__subtitle">Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a></small>
+                    <small class="header__subtitle">Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.CommitDate | time.Format ":date_medium" }}</a></small>
                 {{ else }}
                     <small class="header__subtitle">Last Modified: {{ .Date | time.Format ":date_medium" }}</small>
                 {{- end }}

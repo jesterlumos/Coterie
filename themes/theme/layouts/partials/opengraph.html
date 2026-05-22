@@ -1,0 +1,168 @@
+{{/*  DEFAULT HUGO OG PARTIAL  */}}
+<meta property="og:url" content="{{ .Permalink }}">
+
+{{- with or site.Title site.Params.title | plainify }}
+	<meta property="og:site_name" content="{{ . }}">
+{{- end }}
+
+{{- with or .Title site.Title site.Params.title | plainify }}
+	<meta property="og:title" content="{{ . }}">
+{{- end }}
+
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+	<meta property="og:description" content="{{ trim . "\n\r\t " }}">
+	<meta property="og:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+
+<meta property="article:author" content="Jester Lumos">
+
+{{- if .Params.locale }}
+	<meta property="og:locale" content="{{ replace . `-` `_` }}">
+{{- end }}
+
+{{- if .IsPage }}
+	<meta property="og:type" content="article">
+	{{- with .Section }}
+		<meta property="article:section" content="{{ . }}">
+	{{- end }}
+	{{- $ISO8601 := "2006-01-02T15:04:05-07:00" }}
+	{{- with .PublishDate }}
+		<meta property="article:published_time" {{ .Format $ISO8601 | printf "content=%q" | safeHTMLAttr }}>
+	{{- end }}
+	{{- with .Lastmod }}
+		<meta property="article:modified_time" {{ .Format $ISO8601 | printf "content=%q" | safeHTMLAttr }}>
+	{{- end }}
+	{{- range .GetTerms "tags" | first 6 }}
+		<meta property="article:tag" content="{{ .Page.Title | plainify }}">
+	{{- end }}
+{{- else }}
+	<meta property="og:type" content="website">
+{{- end }}
+
+{{/*  modified to add width and height  */}}
+{{- with partial "_funcs/get-page-images" . }}
+  {{- range . | first 6 }}
+    <meta property="og:image" content="{{ .Permalink }}">
+    <meta property="og:image.width" content="{{ .Image.Width }}">
+    <meta property="og:image.height" content="{{ .Image.Height }}">
+  {{- end }}
+{{- end }}
+
+{{- with .Params.audio }}
+	{{- range . | first 6 }}
+		<meta property="og:audio" content="{{ . | absURL }}">
+	{{- end }}
+{{- end }}
+
+{{- with .Params.videos }}
+	{{- range . | first 6 }}
+		<meta property="og:video" content="{{ . | absURL }}">
+	{{- end }}
+{{- end }}
+
+{{- range .GetTerms "series" }}
+	{{- range .Pages | first 7 }}
+		{{- if ne $ . }}
+			<meta property="og:see_also" content="{{ .Permalink }}">
+		{{- end }}
+	{{- end }}
+{{- end }}
+{{/*  END DEFAULT PARTIAL  */}}
+
+
+{{ $baseImage := resources.Get "images/og_base.png" }}
+{{ $black := resources.Get "fonts/Archivo.ttf" }}
+{{ $regular := resources.Get "fonts/IBMPlexMono.ttf" }}
+
+{{ $image := $baseImage.Filter (images.Text (.Page.Title | truncate 20) (dict
+    "alignx" "left"
+    "aligny" "top"
+    "color" "#ffe5e5"
+    "size" 85
+    "linespacing" 10
+    "x" 170
+    "y" 250
+    "font" $black))
+}}
+
+{{ if .Summary}}
+    {{- $slice := split (plainify .Summary | htmlUnescape) " " -}}
+
+    {{- $line := "" -}}
+    {{- $lineLength := 50 -}}
+
+    {{- $summary := ""}}
+
+    {{- $lineCount := 0 -}}
+    {{- $maxLines := 6 -}}
+    
+    {{- range $slice -}}
+        {{ $summary = printf "%s %s" $summary . }}
+        {{ $line = printf "%s %s" $line . }}
+
+        {{ if gt (len $line) $lineLength }}
+            {{ $summary = printf "%s\n" $summary }}
+            {{ $line = "" }}
+            {{ $lineCount = add $lineCount 1 }}
+        {{- end }}
+
+        {{ if gt $lineCount $maxLines }}
+            {{ $summary = printf "%s..." (chomp $summary) }}
+            {{ break }}
+        {{- end }}
+    {{- end -}} 
+
+    {{ $image = $image.Filter (images.Text $summary (dict
+        "alignx" "left"
+        "aligny" "top"
+        "color" "#846262"
+        "size" 22
+        "linespacing" 6
+        "x" 175
+        "y" 340
+        "font" $regular))
+    }}
+{{- end }}
+
+{{ $categories := .Page.Params.Categories }}
+{{- if $categories }}
+    {{ $category := printf "/%s" (index $categories 0) }}
+    {{ $image = $image.Filter (images.Text $category (dict
+        "color" "#ffe5e5"
+        "size" 32
+        "x" 600
+        "y" 128
+        "font" $regular))
+    }}
+{{- end }}
+
+{{ if .GitInfo }}
+    {{ $date := .GitInfo.CommitDate | time.Format ":date_medium" }}
+
+    {{ $image = $image.Filter (images.Text $date (dict
+        "alignx" "right"
+        "aligny" "bottom"
+        "color" "#846262"
+        "size" 22
+        "x" 335
+        "y" 210
+        "font" $regular))
+    }}
+{{ else if .Date}}
+    {{ $date := .Date | time.Format ":date_medium" }}
+        {{ $image = $image.Filter (images.Text $date (dict
+        "alignx" "right"
+        "aligny" "bottom"
+        "color" "#846262"
+        "size" 22
+        "x" 315
+        "y" 210
+        "font" $regular))
+    }}
+{{- end }}
+
+{{ $image = resources.Copy (path.Join .Page.RelPermalink "og.png") $image }}
+
+<meta property="og:image" content="{{ $image.Permalink }}">
+<meta property="og:image:width" content="{{ $image.Width }}">
+<meta property="og:image:height" content="{{ $image.Height }}">

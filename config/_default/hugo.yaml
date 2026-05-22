@@ -4,6 +4,7 @@ title: Jester's Coterie
 copyright: © 2026 Jester Lumos. All rights reserved.
 
 theme: theme
+defaultContentLanguage: en
 
 pluralizelisttitles: false
 summaryLength: 50
@@ -11,7 +12,7 @@ summaryLength: 50
 enableGitInfo: true
 
 frontmatter:
-  lastmod: ["lastmod", ":git", "date", "publishDate"]
+  lastmod: [":git", ":git", "date", "publishDate"]
 
 params:
   ShoFullTextinRSS: true
