@@ -1,0 +1,10 @@
+{{- $href := (printf "%s/404" .Site.BaseURL) -}}
+{{ if .File }}
+    {{ $href = (printf "https://github.githistory.xyz/jesterlumos/Coterie/blob/main/content/%s" .File.Path)}}
+{{- end }}
+
+{{ if .GitInfo }}
+    Last Modified: <a href="{{ $href }}">{{ .GitInfo.CommitDate | time.Format ":date_medium" }}</a></small>
+{{ else if .Date }}
+    Last Modified: {{ .Date | time.Format ":date_medium" }}
+{{- end }}

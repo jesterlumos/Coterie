@@ -1,5 +1,5 @@
 ---
-title: "exhibited"
+title: "Exhibited"
 date: 2026-05-16T11:13:16-07:00
 draft: false
 categories: ["list"]

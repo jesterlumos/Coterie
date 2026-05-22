@@ -15,7 +15,7 @@ frontmatter:
   lastmod: [":git", ":git", "date", "publishDate"]
 
 params:
-  ShoFullTextinRSS: true
+  ShowFullTextinRSS: true
 
   social: 
     - name: Github

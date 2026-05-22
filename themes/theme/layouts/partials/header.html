@@ -6,16 +6,12 @@
         </h1>
 
         {{ partial "categories" .}} 
-        {{ if not .IsHome }}
-            {{ if .Date }} 
-                {{ if .GitInfo }}
-                    <small class="header__subtitle">Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .GitInfo.CommitDate | time.Format ":date_medium" }}</a></small>
-                {{ else }}
-                    <small class="header__subtitle">Last Modified: {{ .Date | time.Format ":date_medium" }}</small>
-                {{- end }}
-                {{ if .Params.tags }} <hr> {{ partial "tags" .}} {{- end }}
-            {{- end }} 
-        {{ else }}
+
+        <small class="header__subtitle"> 
+            {{ partial "date" .}}
+        </small>
+        
+        {{ if .IsHome }}
             <small class="header__subtitle">
                 Abandon all expectations of a polished internet, celebrate growth, and explore the uncharted hypertext wilderness.
             </small>

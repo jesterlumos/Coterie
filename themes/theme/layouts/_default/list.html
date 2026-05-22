@@ -18,13 +18,7 @@
 				<h2 class="card__label">{{ .Title }}</h2>
 				<small class="card__subtitle"> {{ partial "categories" . }} </small>
 				<small class="card__subtitle"> 
-					{{ if .Date }} 
-						{{ if .GitInfo }}
-							Last Modified: <a href="https://www.github.com/jesterlumos/Coterie/commit/{{ .GitInfo.Hash }}">{{ .Date | time.Format ":date_medium" }}</a> 
-						{{ else }}
-							Last Modified: {{ .Date | time.Format ":date_medium" }}
-						{{- end }}
-					{{- end }} 
+					{{ partial "date" .}}
 				</small>
 				<hr>
 				{{ if .Params.tags }}
