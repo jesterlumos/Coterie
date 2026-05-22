@@ -136,13 +136,26 @@
     }}
 {{- end }}
 
-{{ if or .GitInfo .Date }}
-    {{ $image = $image.Filter (images.Text (partial "date" .) (dict
+{{ if .GitInfo }}
+    {{ $date := .GitInfo.CommitDate | time.Format ":date_medium" }}
+
+    {{ $image = $image.Filter (images.Text $date (dict
         "alignx" "right"
         "aligny" "bottom"
         "color" "#846262"
         "size" 22
         "x" 335
+        "y" 210
+        "font" $regular))
+    }}
+{{ else if .Date}}
+    {{ $date := .Date | time.Format ":date_medium" }}
+        {{ $image = $image.Filter (images.Text $date (dict
+        "alignx" "right"
+        "aligny" "bottom"
+        "color" "#846262"
+        "size" 22
+        "x" 315
         "y" 210
         "font" $regular))
     }}
